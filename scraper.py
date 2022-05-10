@@ -48,7 +48,7 @@ dates_of_join_eu=df['Adhésion']
 capitals = df['Capitale']
 areas = df['Superficie']
 
-print(countries)
+
 
 
 
