@@ -1,8 +1,8 @@
-import requests
+
 import sqlite3
 from sqlite3 import Error
 from scraper import *
-from flask_migrate import Migrate
+
 
 
 def create_connection(db_file):
