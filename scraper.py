@@ -20,9 +20,11 @@ tables = soup.find_all('table')
 table = soup.find('table', class_='wikitable sortable')
 tbody = table.find('tbody')
 
-
 # Defining of the dataframe
 df = pd.DataFrame(columns=['Pays', 'Nom_officiel', 'Adhésion','Capitale','Superficie'])
+
+# with open(, 'w', encoding='utf8') as text_file:
+#     pass
 
 # Collecting Ddata first step
 for row in table.tbody.find_all('tr'):    
@@ -47,6 +49,8 @@ official_names=df['Nom_officiel']
 dates_of_join_eu=df['Adhésion']
 capitals = df['Capitale']
 areas = df['Superficie']
+
+
 
 
 

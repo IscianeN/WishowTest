@@ -1,0 +1,1 @@
+an ERROR occured: unsupported operand type(s) for +: 'BeautifulSoup' and 'str'
