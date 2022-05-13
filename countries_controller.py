@@ -18,7 +18,7 @@ def get_details(a_country):
         print(a_country)
         conn=sqlite3.connect('SQlite_python.db')
         cursor_obj =conn.cursor()
-        cursor_obj.execute("SELECT * FROM members_states WHERE country = ?", [a_country])
+        cursor_obj.execute("SELECT * FROM members_states WHERE country = ? LIMIT 1", [a_country])
         details = []
         result = cursor_obj.fetchall()
         print('result:',result)
