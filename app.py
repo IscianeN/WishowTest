@@ -18,9 +18,12 @@ def home():
 def display():
     return countries_str
 
-@app.route('/details/<country>', methods=['GET'])
-def details(country):
-    result = get_details_country()
-    return result
-    
+# converter:variable_name
+
+@app.route('/details/<a_country>', methods=['GET'])
+def details(a_country):
+    details_str= get_details(a_country)
+    return details_str
+
+
 app.run()

@@ -13,20 +13,21 @@ def list_to_string(mylist):
     mystring =' '.join(map(str,mylist))
     return mystring
 
-def get_details(country):
-    conn = sqlite3.connect('SQlite_python.db')
-    cursor_obj  = conn.cursor()
-    query = """SELECT * FROM members_states WHERE country = "{0}";""".format(country)
-    cursor_obj.execute(query)
-    result=cursor_obj.fetchall()
-    country_details=' '.join([str(country) for country in result])
-    return country_details
-    
-def get_details_country():
-        for country in countries:
-            details = get_details(country)
-        return details
-    
+
+def get_details(a_country):
+        print(a_country)
+        conn=sqlite3.connect('SQlite_python.db')
+        cursor_obj =conn.cursor()
+        cursor_obj.execute("SELECT * FROM members_states WHERE country = ?", [a_country])
+        details = []
+        result = cursor_obj.fetchall()
+        print('result:',result)
+        details.append(result)
+        print('details :',details)
+        details_str=' '.join([str(a_country) for a_country in details])
+        
+        return details_str
+
 
 def get_countries():
     conn = sqlite3.connect('SQLite_python.db')

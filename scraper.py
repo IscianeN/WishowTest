@@ -44,6 +44,7 @@ for row in table.tbody.find_all('tr'):
         df = df.append({'Pays': country,  'Nom_officiel': official_name,'Adhésion':date_of_join_eu,'Capitale':capital,'Superficie':area},ignore_index=True)
 
 countries = df['Pays']
+print(countries)
 official_names=df['Nom_officiel']
 dates_of_join_eu=df['Adhésion']
 capitals = df['Capitale']
